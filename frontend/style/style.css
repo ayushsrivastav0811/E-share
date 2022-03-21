@@ -1,0 +1,59 @@
+body,html{
+    font-family: system-ui;
+    background: #d8e4f8;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+body,.drop-zone{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+}
+.upload-container{
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 0px 20px 20px #0000002e;
+}
+.drop-zone{
+    width: 500px;
+    min-height: 200px;
+    border: 2px dashed #0288d147;
+    margin: 30px;
+    border-radius: 15px;
+}
+.dragged.drop-zone{
+    background:#d8e4f8 ;
+    border-color:#2196f3 ;
+}
+.icon-container{
+    width: 75px;
+    height: 100px;
+    position: relative;
+}
+.icon-container img{
+    width: 75px;
+    position: absolute;
+    transform-origin: bottom;
+}
+.icon-container .centre{
+    z-index: 2;
+}
+.icon-container .right,.left{
+    filter: grayscale(.5);
+   transform:  scale(.9);
+}
+.dragged .icon-container .left{
+    transform: rotate(-10deg) translateX(-20px)scale(.9) ;
+}
+.dragged .icon-container .right{
+    transform: rotate(10deg) translate(20px)scale(.9);
+}
+#fileinput{
+    display:none;
+}
+.browserbtn{
+    color:#0a15e4;
+    cursor: pointer;
+}
